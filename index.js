@@ -93,3 +93,36 @@ for (let i = 0; i < number; i++) {
 }
 console.log(main)
 
+function robotRefactory(name, model, makeSound) {
+    return {
+        name: name,
+        model: model,
+        makeSound() {
+            console.log('hello')
+        },
+    }
+}
+
+robotOne = robotRefactory('piana', 2000)
+robotTwo = robotRefactory('sandia', 3000)
+console.log(robotOne.name)
+
+
+
+
+
+function alerting() {
+    alert(`hello world`)
+}
+let timerId;  //setInterval(alerting, 2000)
+function timeHandler() {
+    if (timerId) {
+        timerId = setInterval(alerting, 2000)
+    }
+}
+const word = 'This iS a bOy';
+
+function myFunc(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
+console.log(myFunc(word));
