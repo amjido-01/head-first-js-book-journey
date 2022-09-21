@@ -120,9 +120,33 @@ function timeHandler() {
         timerId = setInterval(alerting, 2000)
     }
 }
+
+
 const word = 'This iS a bOy';
 
 function myFunc(str) {
     return str.replace(/[aeiou]/gi, '');
 }
 console.log(myFunc(word));
+
+function alphabetPosition(text) {
+    var result = "";
+    for (var i = 0; i < text.length; i++) {
+      var code = text.toUpperCase().charCodeAt(i)
+      if (code > 64 && code < 91) result += (code - 64) + " ";
+      console.log(result)
+    }
+  
+    return result.slice(0, result.length - 1);
+}
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
+function alphaModify(str1) {
+    let resultTwo = '';
+    str1.forEach(items => {
+        let codeTwo = str1.toUpperCase().charCodeAt(items);
+        if (codeTwo > 64 && codeTwo < 91) resultTwo += (codeTwo - 64) + ' ';
+    })
+    return resultTwo.slice(0, resultTwo.length - 1);
+}
+console.log(alphaModify("The sunset sets at twelve o' clock"))
